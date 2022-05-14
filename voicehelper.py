@@ -1,4 +1,15 @@
 
+
+'''
+Надо скачать следующие модули, чтобы запустить
+
+откройте терминал и введите: 
+pip install pipwin
+pipwin install pyaudio
+pip install speechRecognition
+
+'''
+
 import pyaudio
 import speech_recognition as sr
 import os
