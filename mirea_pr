@@ -1,0 +1,167 @@
+#!/usr/bin/env python3
+import math
+import re
+
+
+class main:
+    def __init__(self):
+        self.pos = "A"
+
+    def color(self):
+        if self.pos == "A":
+            return 1
+        if self.pos == "C":
+            self.pos = "D"
+            return 3
+        if self.pos == "E":
+            self.pos = "A"
+            return 6
+        if self.pos == "F":
+            return 8
+        raise KeyError()
+
+    def etch(self):
+        if self.pos == "A":
+            self.pos = "B"
+            return 0
+        if self.pos == "B":
+            self.pos = "C"
+            return 2
+        if self.pos == "D":
+            self.pos = "E"
+            return 4
+        if self.pos == "E":
+            self.pos = "F"
+            return 5
+        if self.pos == "F":
+            self.pos = "D"
+            return 7
+        raise KeyError()
+        
+
+"""def main(n, m, b, z):
+    mult = 1
+    sum2 = 0
+
+    for i in range(1, b+1):
+        sum1 = 0
+        for j in range(1, m+1):
+            sum2 = 0
+            for k in range(1, n + 1):
+                sum2 += 10 * (k ** 2 - 80 * z) \
+                        - 92 * (z + j ** 2 / 41) ** 2\
+                        - 27 * i ** 4
+            sum1 += sum2
+        mult *= sum1
+
+    return mult
+
+
+print('{0:.2e}'.format(main(2, 4, 4, -0.5)))"""
+
+
+
+"""def main(a):
+    if a[3] == 1981:
+        return up(a)
+    elif a[3] == 1971:
+        return down(a)
+
+
+def up(a):
+    if a[4] == 'RUST':
+        return rust(a)
+    elif a[4] == 'LFE':
+        return 2
+    elif a[4] == 'MTML':
+        return mtml(a)
+
+
+def down(a):
+    if a[1] == 2015:
+        return 8
+    elif a[1] == 1960:
+        return 9
+
+
+def mtml(a):
+    if a[0] == 2020:
+        return rust(a)
+    if a[0] == 2000:
+        return last(a)
+    if a[0] == 1999:
+        return 7
+
+
+def last(a):
+    if a[2] == 'OPA':
+        return 5
+    if a[2] == 'ASP':
+        return 6
+
+
+def rust(a):
+    if a[4] == 'MTML':
+        if a[2] == 'OPA':
+            return 3
+        if a[2] == 'ASP':
+            return 4
+    elif a[4] == 'RUST':
+        if a[2] == 'OPA':
+            return 0
+        if a[2] == 'ASP':
+            return 1
+
+
+print(main([1999, 1960, 'OPA', 1971, 'RUST']))"""
+
+"""def main(x):
+    A = (x & 0x3fff) << 17
+    B = (x & 0x3ffc000) >> 9
+    C = (x & 0x4000000) << 5
+    D = (x & 0xf8000000) >> 27
+
+    return A | B | C | D
+
+
+print(hex(main(0xf6d204fc)))"""
+
+"""def main(z, y):
+    sum1 = 0
+    for i in range(1, len(z)+1):
+        sum1 += (y[len(z) - math.ceil(i / 4)] ** 3
+                 + z[math.ceil(i / 2) - 1]
+                 + 74 * z[math.ceil(i / 2) - 1] ** 2) ** 7
+    return sum1
+
+
+print(main([-0.86, 0.58, -0.21, 0.94], [-0.8, -0.74, -0.86, -0.32]))"""
+
+"""def main(n):
+    if n == 0:
+        return 0.31
+    elif n >= 1:
+        return main(n-1) ** 2 + \
+               (math.exp(36 * main(n-1) ** 3 +
+                         main(n-1) ** 2)) / 42
+
+
+print(main(8))"""
+
+"""def main(n, b):
+    mult = 1
+    sum2 = 0
+
+    for i in range(1, b+1):
+        sum1 = 0
+        for k in range(1, n+1):
+            sum1 += i ** 3 - k ** 4
+        mult *= sum1
+
+    for i in range(1, b+1):
+        sum2 += i ** 5 - 13 * i ** 3 - 59
+
+    return sum2 + mult
+
+
+print('{0:.2e}'.format(main(6, 4)))"""
