@@ -6,9 +6,11 @@
 откройте терминал и введите: 
 pip install pipwin
 pipwin install pyaudio
-pip install speechRecognitio
+pip install speechRecognition
+
 
 так же потребуется определить правильный индекс устройства с плмлщью команды - 
+pip install speechRecognition
 
 '''
 
