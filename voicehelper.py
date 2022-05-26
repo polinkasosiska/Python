@@ -40,7 +40,7 @@ while True:
             voice.say(random.choice(greetings))
             voice.runAndWait()
         elif speech.find("открой файл") >= 0 or speech.find("игра") >=0:
-            os.startfile("C:/Users/Vitaliy/Desktop/arkanoid.py")
+            os.startfile("C:/Users/poli/Desktop/arkanoid.py")
             voice.say("Игра запущена")
             voice.runAndWait()
         elif "youtube" in speech:
