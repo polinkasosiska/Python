@@ -15,3 +15,66 @@ def main(y, x, z):
         right = 23 * x[n + 1 - math.ceil(i)] 
         total += 1 * (left - middle - right)
     return 1 * total
+    
+    
+    3 задача 
+    
+    def main(n, m, b, z):
+    f = 1
+    for i in range(1, b+1):
+        f1 = 0
+        for j in range(1, m+1):
+            for k in range(1, n+1):
+                f1 += 10*(k**2-80*z)-92*(z+j**2/41)**2-27*i**4
+        f *= f1
+    return f
+
+print(main(2, 4, 4, -0.05))
+print(main(3, 3, 6, 0.58))
+
+
+7 задача
+
+def main(x):
+    c = x & 0xffe00000
+    b = x & 0x001fff00
+    a = x & 0x000000ff
+    c = c >> 8
+    b = b >> 8
+    a = a << 24
+    return a+b+c
+
+print(main(0x829be68d) == 0x8d829be6)
+print(main(0x0fa45bf7) == 0xf70fa45b)
+
+
+
+8 задача
+
+
+
+
+def main(x):
+    di = {}
+    al = []
+    sl = []
+    a = x.replace(' ', '')
+    a = a.replace('\n', '')
+    a = a.split('.</section>;')
+    a = a[:-1]
+    for i in range(0, len(a)):
+        string = a[i]
+        pos1 = string.find('q(')+2
+        pos2 = string.find('<-#')
+        al.append(string[pos1:pos2-1])
+        sl.append(int(string[pos2+3:]))
+    di = dict(zip(al, sl))
+    return di
+
+print(main('<section> loc q(ririza_407)<- #-1971. </section>; <section>loc\nq(xeenla)<-#6270. </section>; <section> loc q(zave)<- #-430.\n</section>; <section> loc q(edle)<- #7589. </section>;'))
+print(main('<section> loc q(maatis)<- #7606. </section>; <section> loc q(tion) <-\n#7880. </section>;<section> loc q(diis) <- #-7226.</section>;<section>\nloc q(enqu)<- #5522.</section>;'))
+
+
+
+
+
